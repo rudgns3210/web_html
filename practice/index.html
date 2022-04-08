@@ -18,7 +18,18 @@
     
             #sub_reset{
                 background: rgb(176, 250, 176);
-                padding-left: 45%;
+                padding-left: 42%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+            .select_radio{
+                margin-left: 30%;
+            }
+            #page_move{
+                padding-right: 2%;
+            }
+            #nameid{
+                margin-top: 10%;
             }
         </style>
 
@@ -32,17 +43,17 @@
     
             <div style="width: 50%; height: 100%; background: rgb(212, 253, 116);">
                 <form>
-                    <label>고객명 : </label>
+                    <label style="margin-left: 20%;" >고객명 : </label>
                     <input type="text" name="name" id="nameid"><br><br>
                     
-                    <label>전화번호 : </label>
+                    <label style="margin-left: 20%;">전화번호 : </label>
                     <input type="tel" name="tel" id="telid"><br><br>
         
-                    <label>E-mail : </label>
+                    <label style="margin-left: 20%;">E-mail : </label>
                     <input type="email" name="email" id="emailid"><br><br>
         
-                    <img src=""
-                    <label>스키장 선택</label>
+                    <label style="margin-left: 20%;">스키장 선택</label>
+                    
                     <select name="resort" id="resortid">
                         <option value="default"> 스키장을 선택해주세요 </option>
                         <option value="1"> 하이원 </option>
@@ -57,13 +68,13 @@
     
             <div style="flex-grow: 1; background: rgb(212, 229, 250);">
                 <form>
-                    <fieldset style="width: 190px; height: 100%;">
+                    <fieldset style="width: 190px; height: 100%;" class="select_radio">
                         <legend>장비 선택</legend>
                         <input type="radio" name="ski" id="skiid">스키<br>
                         <input type="radio" name="ski" id="boardid">스노우보드<br>
                     </fieldset><br>
                     
-                    <fieldset style="width: 190px; height: 100%;">
+                    <fieldset style="width: 190px; height: 100%" class="select_radio">
                         <legend>코스 선택(중복선택 가능)</legend>
                         <input type="checkbox" name="l1" id="l1">초급<br>
                         <input type="checkbox" name="l2" id="l2">중급<br>
@@ -76,8 +87,11 @@
         </div>
     
         <div id="sub_reset">
-            <input type="submit" name="submit"> <input type="reset" name="reset"><br>
-            <button type="button" onclick="location.href='practice_by_myself(4.7_2).html'">이동수단 선택 페이지</button>
+            <input type="submit" name="submit" style="margin-right: 6%; padding-left: 2%; padding-right: 2%;">
+            <input type="reset" name="reset"><br>
+            
+            <button type="button" id="page_move" onclick="location.href='practice_by_myself(4.7_2).html'">이동수단 선택 페이지</button>
+
         </div>
 
         <!-- <a href="practice_by_myself(4.7_2).html">이동수단 선택 페이지</a><br><br>-->
@@ -86,8 +100,6 @@
         <p>관련 페이지(각 속성 설명)</p>
         리셋버튼 생성 : <a href="https://hianna.tistory.com/310" target="_blank">https://hianna.tistory.com/310</a><br>
         각 태그 설명 및 사용법 : <a href="http://www.homejjang.com/03/link.php" target="_blank">http://www.homejjang.com/03/link.php</a><br>
-
-
 
     </body>
 </html>
