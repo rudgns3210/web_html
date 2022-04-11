@@ -8,36 +8,6 @@
 
         <link rel="stylesheet" href="style.css">
         <!-- 외부 css 적용 -->
-
-        <!-- <style>
-            #person {
-                text-align: center;
-            }
-
-            #topdiv {
-                margin-top: 5%;
-                height: 60px;
-            }
-
-            #sub_reset {
-                background: rgb(176, 250, 176);
-                padding-left: 42%;
-                padding-top: 1%;
-                padding-bottom: 1%;
-            }
-
-            #page_move {
-                padding-right: 2%;
-            }
-            #nameid {
-                margin-top: 10%;
-            }
-
-            .select_radio {
-                margin-left: 30%;
-            }
-        </style> -->
-
     </head>
 
     <body>
@@ -73,6 +43,9 @@
                     </option>
                     <option value="2">
                         용평
+                    </option>
+                    <option value="3">
+                        휘닉스파크
                     </option>
                     <option value="3">
                         비발디
@@ -137,23 +110,26 @@
         </div>
         
 
-        <div>
+        <div class="done">
             <input type="submit" value="예약">
-            <input type="reset" value="다시 작성" style="margin-bottom: 10px;"><br>
+            <input type="reset" value="다시 작성">
 
             <button type="button" onclick="location.href='practice_by_myself(4.7_2).html'">이동수단 선택 페이지</button>
         </div>
 
         </form>
-        
-        <!-- <a href="practice_by_myself(4.7_2).html">이동수단 선택 페이지</a><br><br> <p><br>예제
-        출처 :<a
-        href="https://velog.io/@layssingcar/HTML-%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C"
-        target="_blank"> 출처로 이동</a></p> <p>관련 페이지(각 속성 설명)</p> 리셋버튼 생성 : <a
-        href="https://hianna.tistory.com/310"
-        target="_blank">https://hianna.tistory.com/310</a><br> 각 태그 설명 및 사용법 : <a
-        href="http://www.homejjang.com/03/link.php"
-        target="_blank">http://www.homejjang.com/03/link.php</a><br> -->
 
+        <hr>
+        <div>
+            연습입니다. (datalist - 자동완성)<br>
+            좋아하는 음식의 종류는?
+            <input type="text" list="food">
+            <datalist id="food">
+                <option>한식</option>
+                <option>중식</option>
+                <option>일식</option>
+                <option>양식</option>
+            </datalist>
+        </div>
     </body>
 </html>
