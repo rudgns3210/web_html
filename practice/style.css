@@ -1,0 +1,23 @@
+#topdiv{
+  text-align: center;
+}
+
+.container{
+   display: flex;
+}
+
+.info{
+  background-color: azure;
+  width: 50%;
+}
+
+.rent{
+  background-color: khaki;
+  width: 50%;
+}
+
+.date{
+ background-color: moccasin;
+}
+
+

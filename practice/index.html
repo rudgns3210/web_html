@@ -6,34 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>4.7일 연습(레이블 인풋 등)</title>
 
-        <style>
+        <link rel="stylesheet" href="style.css">
+        <!-- 외부 css 적용 -->
+
+        <!-- <style>
             #person {
                 text-align: center;
             }
-    
-            #topdiv{
+
+            #topdiv {
                 margin-top: 5%;
                 height: 60px;
             }
-    
-            #sub_reset{
+
+            #sub_reset {
                 background: rgb(176, 250, 176);
                 padding-left: 42%;
                 padding-top: 1%;
                 padding-bottom: 1%;
             }
-            
-            #page_move{
+
+            #page_move {
                 padding-right: 2%;
             }
-            #nameid{
+            #nameid {
                 margin-top: 10%;
             }
 
-            .select_radio{
+            .select_radio {
                 margin-left: 30%;
             }
-        </style>
+        </style> -->
 
     </head>
 
@@ -41,89 +44,116 @@
         <div id="topdiv">
             <h3 id="person">예약자 정보</h3>
         </div>
-        <div  style="display: flex; height: 250px;">
-    
-            <div style="width: 50%; height: 100%; background: rgb(212, 253, 116);">
-                <form>
-                    <label style="margin-left: 20%;" >고객명 : </label>
-                    <input type="text" name="name" id="nameid"><br><br>
-                    
-                    <label style="margin-left: 20%;">전화번호 : </label>
-                    <input type="tel" name="tel" id="telid"><br><br>
-        
-                    <label style="margin-left: 20%;">E-mail : </label>
-                    <input type="email" name="email" id="emailid"><br><br>
-        
-                    <label style="margin-left: 20%;">스키장 선택</label>
-                    
-                    <select name="resort" id="resortid" style="text-align: center;">
-                        <option value="default"> 스키장을 선택해주세요 </option>
-                        <option value="1"> 하이원 </option>
-                        <option value="2"> 용평 </option>
-                        <option value="3"> 비발디 </option>
-                        <option value="4"> 무주 </option>   
-                    </select>
-                    <br><br>
-                </form>
-    
-            </div>
-    
-            <div style="flex-grow: 1; background: rgb(212, 229, 250);">
-                <form>
-                    <fieldset style="width: 190px; height: 100%;" class="select_radio">
-                        <legend>장비 선택</legend>
-                        <input type="radio" name="ski" id="skiid">스키<br>
-                        <input type="radio" name="ski" id="boardid">스노우보드<br>
-                    </fieldset><br>
-                    
-                    <fieldset style="width: 190px; height: 100%" class="select_radio">
-                        <legend>코스 선택(중복선택 가능)</legend>
-                        <input type="checkbox" name="l1" id="l1">초급<br>
-                        <input type="checkbox" name="l2" id="l2">중급<br>
-                        <input type="checkbox" name="l3" id="l3">중상급<br>
-                        <input type="checkbox" name="l4" id="l4">상급<br>
-                        <input type="checkbox" name="l5" id="l5">최상급<br>                
-                    </fieldset><br>
-            </div>
-    
-        </div>
-    
-        <div id="sub_reset">
-            <input type="submit" name="submit" style="margin-right: 6%; padding-left: 2%; padding-right: 2%;">
-            <input type="reset" name="reset" style="margin-bottom: 10px;"><br>
-            
-            <button type="button" id="page_move" onclick="location.href='practice_by_myself(4.7_2).html'">이동수단 선택 페이지</button>
 
-        </div>
+        <form>
+        <div class="container">
+            <div class="info" style="padding-top:2%;">
+                <label id="name" style="margin-left: 20%;">고객명 :
+                </label>
 
-        <div style="background: rgb(166, 247, 233);">
-            <form>
-                <label style="padding-left: 10%;" >출발 장소 : </label>
-                <select style="width: auto; text-align: center;margin-right: 10%;">
-                    <option value="default"> 장소를 선택해주세요 </option>
-                    <option value="location1">서면</option>
-                    <option value="location2">동래</option>
-                    <option value="location3">남포</option>
-                    <option value="location4">덕천</option>
+                <input type="text" name="name" id="nameid"><br><br>
+
+                <label style="margin-left: 20%;">전화번호 :
+                </label>
+                
+                <input type="tel" name="tel" id="telid"><br><br>
+
+                <label style="margin-left: 20%;">E-mail :
+                </label>
+                
+                <input type="email" name="email" id="emailid"><br><br>
+
+                <label style="margin-left: 20%;">스키장 선택</label>
+                <select style="text-align: center;">
+                    <option value="default">
+                        스키장을 선택해주세요
+                    </option>
+                    <option value="1">
+                        하이원
+                    </option>
+                    <option value="2">
+                        용평
+                    </option>
+                    <option value="3">
+                        비발디
+                    </option>
+                    <option value="4">
+                        무주
+                    </option>
                 </select>
-                <label>출발 시간 : </label>
-                <select style="width: auto; text-align: center;margin-right: 20%;">
-                    <option value="default"> 출발시간을 선택해주세요 </option>
-                    <option value="time1"> 04:30</option>
-                    <option value="time2"> 05:00</option>
-                    <option value="time3"> 05:30</option>
-                    <option value="time4"> 06:00</option>
-                </select>
-            </form>
-                        
+                <br>
+            </div>
+
+            <div class="rent" style="padding-top: 1%;">
+                <fieldset class="select_radio">
+                    <legend>장비 선택</legend>
+                    <input type="radio" name="ski" id="skiid">스키<br>
+                    <input type="radio" name="ski" id="boardid">스노우보드<br>
+                </fieldset><br>
+
+                <fieldset class="select_radio">
+                    <legend>코스 선택(중복선택 가능)</legend>
+                    <input type="checkbox" name="lavel">초급<br>
+                    <input type="checkbox" name="lavel">중급<br>
+                    <input type="checkbox" name="lavel">중상급<br>
+                    <input type="checkbox" name="lavel">상급<br>
+                    <input type="checkbox" name="lavel">최상급<br>
+                </fieldset><br>
+            </div>
         </div>
 
-        <!-- <a href="practice_by_myself(4.7_2).html">이동수단 선택 페이지</a><br><br>-->
+        <div class="date">
 
-        <p><br>예제 출처 :<a href="https://velog.io/@layssingcar/HTML-%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C" target="_blank"> 출처로 이동</a></p>
-        <p>관련 페이지(각 속성 설명)</p>
-        리셋버튼 생성 : <a href="https://hianna.tistory.com/310" target="_blank">https://hianna.tistory.com/310</a><br>
-        각 태그 설명 및 사용법 : <a href="http://www.homejjang.com/03/link.php" target="_blank">http://www.homejjang.com/03/link.php</a><br>
+            <label >출발 일 :</label>
+
+            <input type="date">
+
+            <label>출발 시간 :</label>
+            <select>
+                <option value="default">
+                        출발시간을 선택해주세요
+                </option>
+                <option value="time1">
+                    04:30</option>
+                <option value="time2">
+                    05:00</option>
+                <option value="time3">
+                    05:30</option>
+                <option value="time4">
+                    06:00</option>
+            </select>
+
+            <label>출발 장소 :</label>
+                
+            <select>
+                <option value="default">
+                    장소를 선택해주세요
+                </option>
+                <option value="location1">서면</option>
+                <option value="location2">동래</option>
+                <option value="location3">남포</option>
+                <option value="location4">덕천</option>
+            </select>
+        </div>
+        
+
+        <div>
+            <input type="submit" value="예약">
+            <input type="reset" value="다시 작성" style="margin-bottom: 10px;"><br>
+
+            <button type="button" onclick="location.href='practice_by_myself(4.7_2).html'">이동수단 선택 페이지</button>
+        </div>
+
+        </form>
+        
+        <!-- <a href="practice_by_myself(4.7_2).html">이동수단 선택 페이지</a><br><br> <p><br>예제
+        출처 :<a
+        href="https://velog.io/@layssingcar/HTML-%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C"
+        target="_blank"> 출처로 이동</a></p> <p>관련 페이지(각 속성 설명)</p> 리셋버튼 생성 : <a
+        href="https://hianna.tistory.com/310"
+        target="_blank">https://hianna.tistory.com/310</a><br> 각 태그 설명 및 사용법 : <a
+        href="http://www.homejjang.com/03/link.php"
+        target="_blank">http://www.homejjang.com/03/link.php</a><br> -->
 
     </body>
 </html>
