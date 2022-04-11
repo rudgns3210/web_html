@@ -15,44 +15,56 @@
             <h3 id="person">예약자 정보</h3>
         </div>
 
-        <form>
+        <form method="post">
         <div class="container">
             <div class="info" style="padding-top:2%;">
                 <label id="name" style="margin-left: 20%;">고객명 :
                 </label>
 
-                <input type="text" name="name" id="nameid"><br><br>
+                <input type="text" name="name" id="nameid" placeholder="성함" style="text-align: center;" required><br><br>
 
                 <label style="margin-left: 20%;">전화번호 :
                 </label>
                 
-                <input type="tel" name="tel" id="telid"><br><br>
+                <input type="tel" name="tel" id="telid" placeholder="전화번호" style="text-align: center;" required><br><br>
 
                 <label style="margin-left: 20%;">E-mail :
                 </label>
                 
-                <input type="email" name="email" id="emailid"><br><br>
+                <input type="email" name="email" id="emailid" placeholder="이메일" style="text-align: center;" required><br><br>
 
                 <label style="margin-left: 20%;">스키장 선택</label>
                 <select style="text-align: center;">
                     <option value="default">
                         스키장을 선택해주세요
                     </option>
+                    <optgroup label="강원권">
                     <option value="1">
-                        하이원
+                        하이원 리조트
                     </option>
                     <option value="2">
-                        용평
+                        용평 리조트
                     </option>
                     <option value="3">
                         휘닉스파크
                     </option>
                     <option value="3">
-                        비발디
+                        비발디파크
                     </option>
+                    </optgroup>
+                    <optgroup label="경기권">
                     <option value="4">
-                        무주
+                        곤지암 리조트
                     </option>
+                    <option value="5">
+                        지산 리조트
+                    </option>
+                    </optgroup>
+                    <optgroup label="전라권">
+                    <option value="6">
+                        무주 덕유산 리조트
+                    </option>
+                    </optgroup>
                 </select>
                 <br>
             </div>
@@ -131,5 +143,14 @@
                 <option>양식</option>
             </datalist>
         </div>
+        <hr>
+        <div>
+			<progress value="90" max="100"></progress> progress 태그
+		</div>
+        <div>
+            <input type="range" value="30" min="0" max="100">
+			<meter min="0" max="100" value="30" low="25" high="75" optimum="60" ></meter> meter 태그
+		</div>   
+        
     </body>
 </html>
