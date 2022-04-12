@@ -8,6 +8,20 @@
 
         <link rel="stylesheet" href="style.css">
         <!-- 외부 css 적용 -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="async"src="https://www.googletagmanager.com/gtag/js?id=G-MJENLB5WBM"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+            dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-MJENLB5WBM');
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics  여기까지-->
+        
     </head>
 
     <body>
@@ -89,7 +103,7 @@
 
         <div class="date">
 
-            <label >출발 일 :</label>
+            <label>출발 일 :</label>
 
             <input type="date">
 
@@ -134,23 +148,34 @@
         <hr>
         <div>
             연습입니다. (datalist - 자동완성)<br>
-            좋아하는 음식의 종류는?
-            <input type="text" list="food">
-            <datalist id="food">
-                <option>한식</option>
-                <option>중식</option>
-                <option>일식</option>
-                <option>양식</option>
+            좋아했던 교과목은?
+            <input type="text" list="lecture">
+            <datalist id="lecture">
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+                <option value="Java">Java</option>
+                <option value="Mobile Programming"> Mobile Programming</option>
+                <option>Value를 주지 않을 수도 있음</option>
             </datalist>
         </div>
         <hr>
         <div>
-			<progress value="90" max="100"></progress> progress 태그
+			<progress value="80" max="100"></progress> progress 태그
 		</div>
         <div>
             <input type="range" value="30" min="0" max="100">
-			<meter min="0" max="100" value="30" low="25" high="75" optimum="60" ></meter> meter 태그
+			<meter min="0" max="100" value="24" low="25" high="75"></meter> meter 태그
 		</div>   
         
+        <div id="current_date"></p>
+            <form>
+            <script>
+            document.getElementById("current_date").innerHTML = Date();
+            </script>
+            <input type="date">
+
+            </form>
+        </div>
     </body>
 </html>
